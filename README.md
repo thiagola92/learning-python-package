@@ -87,7 +87,10 @@ setup(
   name='my_package',
   version='0.0.1',
   author='thiagola92',
-  packages=['package_folder']
+  packages=[
+    'package_folder',
+    'package_folder.another_folder'
+  ]
 )
 ```
 
