@@ -113,3 +113,6 @@ Se dentro do seu pacote você quiser referênciar outras pastas dentro dele, tem
 
 ## Installing locally
 `pip install -e .`  
+
+# References
+https://betterscientificsoftware.github.io/python-for-hpc/tutorials/python-pypi-packaging/#creating-a-python-package
