@@ -102,11 +102,25 @@ Se dentro do seu pacote você quiser referênciar outras pastas dentro dele, tem
 `from package_folder.fast_folder.fast import say_fast`  
 `from .fast_folder.fast import say_fast`  
 
-# Create package
+# Create package (new)
+
+## Requirements
+`pip install --upgrade pip`  
+`pip install build`  
+
+## Create package
+`python -m build`  
+
+## Installing locally
+`pip install .`  
+
+## Reference
+https://packaging.python.org/en/latest/tutorials/packaging-projects/
+
+# Create package (old)
 
 ## Requirements
 `pip install wheel`  
-(only the first time)  
 
 ## Create package
 `python setup.py bdist_wheel`  
@@ -114,5 +128,5 @@ Se dentro do seu pacote você quiser referênciar outras pastas dentro dele, tem
 ## Installing locally
 `pip install -e .`  
 
-# References
+## Reference
 https://betterscientificsoftware.github.io/python-for-hpc/tutorials/python-pypi-packaging/#creating-a-python-package
