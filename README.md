@@ -105,28 +105,16 @@ Se dentro do seu pacote você quiser referênciar outras pastas dentro dele, tem
 # Create package (new)
 
 ## Requirements
-`pip install --upgrade pip`  
-`pip install build`  
+`pip install --upgrade pip build wheel`  
 
 ## Create package
 `python -m build`  
+or  
+`python setup.py bdist_wheel`  
 
 ## Installing locally
 `pip install .`  
 
 ## Reference
-https://packaging.python.org/en/latest/tutorials/packaging-projects/
-
-# Create package (old)
-
-## Requirements
-`pip install wheel`  
-
-## Create package
-`python setup.py bdist_wheel`  
-
-## Installing locally
-`pip install -e .`  
-
-## Reference
-https://betterscientificsoftware.github.io/python-for-hpc/tutorials/python-pypi-packaging/#creating-a-python-package
+https://packaging.python.org/en/latest/tutorials/packaging-projects/  
+https://betterscientificsoftware.github.io/python-for-hpc/tutorials/python-pypi-packaging/#creating-a-python-package  
