@@ -102,19 +102,40 @@ Se dentro do seu pacote você quiser referênciar outras pastas dentro dele, tem
 `from package_folder.fast_folder.fast import say_fast`  
 `from .fast_folder.fast import say_fast`  
 
-# Create package (new)
+# Create package
+Antes de qualquer coisa atualize seu pip:  
+`pip install --upgrade pip`  
 
-## Requirements
-`pip install --upgrade pip build wheel`  
+## Build
+Instale o pacote responsável por construir pacotes:  
+`pip install build`  
 
-## Create package
+Construa seu pacote com:  
 `python -m build`  
-or  
-`python setup.py bdist_wheel`  
+Ao executar note que ele criou os pacotes na pasta `dist`, um pacote em `tar.gz` (formato antigo) e outro em `whl` (formato novo). Você pode especificar se deseja criar apenas no formato novo ou velho com:  
+Velho: `python -m build --sdist`  
+Novo: `python -m build --wheel`  
+Se não especificar ele irá criar ambos.  
 
-## Installing locally
+## Installing
+Estando na pasta do projeto, basta instalar com:  
 `pip install .`  
 
-## Reference
+A desvantagem de instalar da maneira acima é que se você quiser atualizar o pacote que está usando, precisa instalar novamente. Para evitar isso basta instalar no modo editável.  
+`pip install -e .`  
+Agora qualquer mudança no pacote irá refletir na hora nos seus testes.  
+
+## Upload  
+Biblioteca responsável por fazer upload no Pypi:  
+`pip install twine`  
+Você não precisa fazer upload lá. Uma biblioteca muitas vezes pode ser baixada diretamente de um VCS, por exemplo, baixada de um repositório do Github.  
+
+Para fazer o upload execute:  
+`twine upload dist/*`  
+Fará o upload de todos os pacotes naquela pasta.  
+
+
+# References
 https://packaging.python.org/en/latest/tutorials/packaging-projects/  
 https://betterscientificsoftware.github.io/python-for-hpc/tutorials/python-pypi-packaging/#creating-a-python-package  
+https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#requirements-for-packaging-and-distributing
