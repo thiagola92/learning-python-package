@@ -41,6 +41,9 @@ setup(
 )
 ```
 
+Outros campos do setup:  
+https://github.com/pypa/sampleproject/blob/main/setup.py  
+
 ### Usage
 Os módulos selecionados vão ser acessados diretamente pelos nomes.  
 `from foo import say_foo`  
